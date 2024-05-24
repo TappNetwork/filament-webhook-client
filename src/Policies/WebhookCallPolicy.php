@@ -3,8 +3,8 @@
 namespace Tapp\FilamentWebhookClient\Policies;
 
 use App\Models\User;
-use Spatie\WebhookClient\Models\WebhookCall;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Spatie\WebhookClient\Models\WebhookCall;
 
 class WebhookCallPolicy
 {
