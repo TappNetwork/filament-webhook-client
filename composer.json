@@ -1,0 +1,90 @@
+{
+    "name": "tapp/filament-webhook-client",
+    "description": "Add a Filament resource and a policy for Spatie Webhook client",
+    "keywords": [
+        "Tapp Network",
+        "Laravel",
+        "Filament",
+        "webhook-client",
+        "Webhook"
+    ],
+    "homepage": "https://github.com/tapp/filament-webhook-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steve Williamson",
+            "email": "steve@tappnetwork.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Andréia Bohner",
+            "email": "andreia.bohner@tappnetwork.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "spatie/laravel-package-tools": "^1.16",
+        "filament/filament": "^3.0-stable",
+        "illuminate/contracts": "^10.0||^11.0",
+        "spatie/laravel-webhook-client": "^3.4"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "nunomaduro/collision": "^8.1.1||^7.10.0",
+        "larastan/larastan": "^2.9",
+        "orchestra/testbench": "^9.0.0||^8.22.0",
+        "pestphp/pest": "^2.34",
+        "pestphp/pest-plugin-arch": "^2.7",
+        "pestphp/pest-plugin-laravel": "^2.3",
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpstan/phpstan-phpunit": "^1.3",
+        "spatie/laravel-ray": "^1.35"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tapp\\FilamentWebhookClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tapp\\FilamentWebhookClient\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": [
+            "@composer run prepare",
+            "@php vendor/bin/testbench workbench:build --ansi"
+        ],
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "@composer run build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tapp\\FilamentWebhookClient\\FilamentWebhookClientServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
