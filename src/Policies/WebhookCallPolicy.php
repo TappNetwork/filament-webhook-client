@@ -15,7 +15,7 @@ class WebhookCallPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view webhook call');
+        return true;
     }
 
     /**
@@ -23,7 +23,7 @@ class WebhookCallPolicy
      */
     public function view(User $user, WebhookCall $webhookCall): bool
     {
-        return $user->can('view webhook call');
+        return true;
     }
 
     /**

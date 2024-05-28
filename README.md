@@ -80,7 +80,7 @@ To use another permission and override the default policy, please refer to the s
 
 ## Webhook Call Policy
 
-By default the policy allows view the webhook calls list and an individual webhook call with the `view webhook call` permission.
+By default, the policy included in this plugin allows you to view the list of webhook calls and an individual webhook call.
 If you need to change the permissions, you can override the policy by creating a policy in you project and adding it on `policies -> webhook-call` entry in `filament-webhook-client.php` config file.
 
 ## Testing
