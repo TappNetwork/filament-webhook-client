@@ -2,7 +2,6 @@
 
 namespace Tapp\FilamentWebhookClient\Resources;
 
-use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Infolists;
@@ -11,6 +10,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Spatie\WebhookClient\Models\WebhookCall;
+use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages;
 
 class WebhookCallResource extends Resource
 {
