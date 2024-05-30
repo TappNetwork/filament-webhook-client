@@ -1,0 +1,36 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\$user of method Tapp\\\\FilamentWebhookClient\\\\Policies\\\\WebhookCallPolicy\\:\\:create\\(\\) has invalid type App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: src/Policies/WebhookCallPolicy.php
+
+		-
+			message: "#^Parameter \\$user of method Tapp\\\\FilamentWebhookClient\\\\Policies\\\\WebhookCallPolicy\\:\\:delete\\(\\) has invalid type App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: src/Policies/WebhookCallPolicy.php
+
+		-
+			message: "#^Parameter \\$user of method Tapp\\\\FilamentWebhookClient\\\\Policies\\\\WebhookCallPolicy\\:\\:forceDelete\\(\\) has invalid type App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: src/Policies/WebhookCallPolicy.php
+
+		-
+			message: "#^Parameter \\$user of method Tapp\\\\FilamentWebhookClient\\\\Policies\\\\WebhookCallPolicy\\:\\:restore\\(\\) has invalid type App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: src/Policies/WebhookCallPolicy.php
+
+		-
+			message: "#^Parameter \\$user of method Tapp\\\\FilamentWebhookClient\\\\Policies\\\\WebhookCallPolicy\\:\\:update\\(\\) has invalid type App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: src/Policies/WebhookCallPolicy.php
+
+		-
+			message: "#^Parameter \\$user of method Tapp\\\\FilamentWebhookClient\\\\Policies\\\\WebhookCallPolicy\\:\\:view\\(\\) has invalid type App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: src/Policies/WebhookCallPolicy.php
+
+		-
+			message: "#^Parameter \\$user of method Tapp\\\\FilamentWebhookClient\\\\Policies\\\\WebhookCallPolicy\\:\\:viewAny\\(\\) has invalid type App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: src/Policies/WebhookCallPolicy.php
