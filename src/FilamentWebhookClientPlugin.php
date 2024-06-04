@@ -4,7 +4,6 @@ namespace Tapp\FilamentWebhookClient;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Illuminate\Support\Facades\Gate;
 
 class FilamentWebhookClientPlugin implements Plugin
 {
@@ -28,6 +27,6 @@ class FilamentWebhookClientPlugin implements Plugin
 
     public function boot(Panel $panel): void
     {
-        Gate::policy(config('filament-webhook-client.models.webhook-call'), config('filament-webhook-client.policies.webhook-call'));
+        //
     }
 }
