@@ -75,13 +75,20 @@ public function panel(Panel $panel): Panel
 }
 ```
 
-Make sure that the user you are logged in have the `view webhook call` permission and the webhook client resource will be displayed.
-To use another permission and override the default policy, please refer to the section below.
+#### Appareance
+
+Webhook calls resource content example:
+
+![Filament Webhook Calls resource list](https://raw.githubusercontent.com/TappNetwork/filament-webhook-client/main/docs/webhook-calls-resource.png)
+
+Webhook calls view content example:
+
+![Filament Webhook Calls view record](https://raw.githubusercontent.com/TappNetwork/filament-webhook-client/main/docs/webhook-calls-view.png)
 
 ## Webhook Call Policy
 
 By default, the policy included in this plugin allows you to view the list of webhook calls and an individual webhook call.
-If you need to change the permissions, you can override the policy by creating a policy in you project and adding it on `policies -> webhook-call` entry in `filament-webhook-client.php` config file.
+If you need to change the permissions, you can override the policy by creating a policy in you project and adding it on `policies -> webhook-call` entry on `filament-webhook-client.php` config file.
 
 ## Testing
 
