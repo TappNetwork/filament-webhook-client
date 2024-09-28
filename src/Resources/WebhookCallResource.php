@@ -11,7 +11,6 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Spatie\WebhookClient\Models\WebhookCall;
-use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages;
 
 class WebhookCallResource extends Resource
 {
