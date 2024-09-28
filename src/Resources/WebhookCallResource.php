@@ -9,6 +9,7 @@ use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 use Spatie\WebhookClient\Models\WebhookCall;
 use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages;
 
@@ -118,10 +119,21 @@ class WebhookCallResource extends Resource
 
     public static function getPages(): array
     {
+        $classNameSingular = (string) Str::of(config('filament-webhook-client.resources.WebhookCallResource'))
+            ->afterLast('\\')
+            ->remove('Resource');
+
+        $classNamePlural = (string) Str::of($classNameSingular)
+            ->plural(2);
+
+        $listPage = config('filament-webhook-client.resources.WebhookCallResource').'\Pages\List'.$classNamePlural;
+        $createPage = config('filament-webhook-client.resources.WebhookCallResource').'\Pages\Create'.$classNameSingular;
+        $editPage = config('filament-webhook-client.resources.WebhookCallResource').'\Pages\Edit'.$classNameSingular;
+
         return [
-            'index' => Pages\ListWebhookCalls::route('/'),
-            'create' => Pages\CreateWebhookCall::route('/create'),
-            'edit' => Pages\EditWebhookCall::route('/{record}/edit'),
+            'index' => $listPage::route('/'),
+            'create' => $createPage::route('/create'),
+            'edit' => $editPage::route('/{record}/edit'),
         ];
     }
 }
