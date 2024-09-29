@@ -13,6 +13,7 @@ class FilamentWebhookClientServiceProvider extends PackageServiceProvider
         $package
             ->name('filament-webhook-client')
             ->hasConfigFile()
+            ->hasViews()
             ->hasTranslations();
     }
 
