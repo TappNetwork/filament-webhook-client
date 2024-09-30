@@ -49,11 +49,14 @@ class WebhookCallResource extends Resource
                     ->label('ID'),
                 Infolists\Components\TextEntry::make('name'),
                 Infolists\Components\TextEntry::make('url'),
-                Infolists\Components\KeyValueEntry::make('headers')
+                Infolists\Components\ViewEntry::make('headers')
+                    ->view('filament-webhook-client::infolists.entries.formatted-json')
                     ->columnSpanFull(),
-                Infolists\Components\KeyValueEntry::make('payload')
+                Infolists\Components\ViewEntry::make('payload')
+                    ->view('filament-webhook-client::infolists.entries.formatted-json')
                     ->columnSpanFull(),
-                Infolists\Components\KeyValueEntry::make('exception')
+                Infolists\Components\ViewEntry::make('exception')
+                    ->view('filament-webhook-client::infolists.entries.formatted-json')
                     ->columnSpanFull(),
             ]);
     }
@@ -100,7 +103,9 @@ class WebhookCallResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
+                Tables\Actions\ViewAction::make()
+                    ->stickyModalFooter()
+                    ->stickyModalHeader(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
