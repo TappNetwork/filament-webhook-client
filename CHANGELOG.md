@@ -2,6 +2,19 @@
 
 All notable changes to `Filament Webhook Client` will be documented in this file.
 
+## v1.0.1 - 2024-09-30
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot in https://github.com/TappNetwork/filament-webhook-client/pull/2
+* Replace KeyValueEntry with formatted JSON by @andreia in https://github.com/TappNetwork/filament-webhook-client/pull/6
+
+### New Contributors
+
+* @andreia made their first contribution in https://github.com/TappNetwork/filament-webhook-client/pull/6
+
+**Full Changelog**: https://github.com/TappNetwork/filament-webhook-client/compare/v1.0.0...v1.0.1
+
 ## v1.0.0 - 2024-06-04
 
 ### What's Changed
