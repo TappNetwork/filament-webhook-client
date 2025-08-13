@@ -1,8 +1,8 @@
 <?php
 
-use Tapp\FilamentWebhookClient\Resources\WebhookCallResource;
 use Spatie\WebhookClient\Models\WebhookCall;
 use Tapp\FilamentWebhookClient\Policies\WebhookCallPolicy;
+use Tapp\FilamentWebhookClient\Resources\WebhookCallResource;
 
 return [
 
