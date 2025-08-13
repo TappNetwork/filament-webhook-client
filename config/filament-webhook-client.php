@@ -1,17 +1,21 @@
 <?php
 
+use Spatie\WebhookClient\Models\WebhookCall;
+use Tapp\FilamentWebhookClient\Policies\WebhookCallPolicy;
+use Tapp\FilamentWebhookClient\Resources\WebhookCallResource;
+
 return [
 
     'resources' => [
-        'WebhookCallResource' => \Tapp\FilamentWebhookClient\Resources\WebhookCallResource::class,
+        'WebhookCallResource' => WebhookCallResource::class,
     ],
 
     'models' => [
-        'webhook-call' => \Spatie\WebhookClient\Models\WebhookCall::class,
+        'webhook-call' => WebhookCall::class,
     ],
 
     'policies' => [
-        'webhook-call' => \Tapp\FilamentWebhookClient\Policies\WebhookCallPolicy::class,
+        'webhook-call' => WebhookCallPolicy::class,
     ],
 
     'navigation' => [

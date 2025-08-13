@@ -2,15 +2,21 @@
 
 namespace Tapp\FilamentWebhookClient\Resources;
 
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Infolists;
-use Filament\Infolists\Infolist;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ViewEntry;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Spatie\WebhookClient\Models\WebhookCall;
-use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages;
+use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages\CreateWebhookCall;
+use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages\EditWebhookCall;
+use Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages\ListWebhookCalls;
 
 class WebhookCallResource extends Resource
 {
@@ -41,41 +47,41 @@ class WebhookCallResource extends Resource
         return __('filament-webhook-client::filament-webhook-client.navigation.plural-label');
     }
 
-    public static function infolist(Infolist $infolist): Infolist
+    public static function infolist(Schema $schema): Schema
     {
-        return $infolist
-            ->schema([
-                Infolists\Components\TextEntry::make('id')
+        return $schema
+            ->components([
+                TextEntry::make('id')
                     ->label('ID'),
-                Infolists\Components\TextEntry::make('name'),
-                Infolists\Components\TextEntry::make('url'),
-                Infolists\Components\ViewEntry::make('headers')
+                TextEntry::make('name'),
+                TextEntry::make('url'),
+                ViewEntry::make('headers')
                     ->view('filament-webhook-client::infolists.entries.formatted-json')
                     ->columnSpanFull(),
-                Infolists\Components\ViewEntry::make('payload')
+                ViewEntry::make('payload')
                     ->view('filament-webhook-client::infolists.entries.formatted-json')
                     ->columnSpanFull(),
-                Infolists\Components\ViewEntry::make('exception')
+                ViewEntry::make('exception')
                     ->view('filament-webhook-client::infolists.entries.formatted-json')
                     ->columnSpanFull(),
             ]);
     }
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
+        return $schema
+            ->components([
+                TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('url')
+                TextInput::make('url')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('headers')
+                TextInput::make('headers')
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('payload')
+                Textarea::make('payload')
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('exception')
+                Textarea::make('exception')
                     ->columnSpanFull(),
             ]);
     }
@@ -84,17 +90,17 @@ class WebhookCallResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('url')
+                TextColumn::make('url')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -102,14 +108,14 @@ class WebhookCallResource extends Resource
             ->filters([
                 //
             ])
-            ->actions([
-                Tables\Actions\ViewAction::make()
+            ->recordActions([
+                ViewAction::make()
                     ->stickyModalFooter()
                     ->stickyModalHeader(),
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -124,9 +130,9 @@ class WebhookCallResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListWebhookCalls::route('/'),
-            'create' => Pages\CreateWebhookCall::route('/create'),
-            'edit' => Pages\EditWebhookCall::route('/{record}/edit'),
+            'index' => ListWebhookCalls::route('/'),
+            'create' => CreateWebhookCall::route('/create'),
+            'edit' => EditWebhookCall::route('/{record}/edit'),
         ];
     }
 }
