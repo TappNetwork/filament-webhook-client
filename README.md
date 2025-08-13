@@ -7,16 +7,31 @@
 
 This plugin adds a Filament resource and a policy for [Spatie Webhook Client](https://github.com/spatie/laravel-webhook-client/).
 
+## Version Compatibility
+
+ Filament | Filament Webhook Client
+:---------|:-----------------------
+ 3.x      | 1.x
+ 4.x      | 4.x
+
 ## Installation
 
 > [!IMPORTANT]
 > First, make sure you have [Spatie Webhook Client](https://github.com/spatie/laravel-webhook-client/)
 > installed and configured.
 
-You can install the package via composer:
+You can install the package via Composer:
+
+### For Filament 3
 
 ```bash
-composer require tapp/filament-webhook-client
+composer require tapp/filament-webhook-client:"^1.0"
+```
+
+### For Filament 4
+
+```bash
+composer require tapp/filament-webhook-client:"^4.0"
 ```
 
 You can publish the config file with:
