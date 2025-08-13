@@ -2,6 +2,16 @@
 
 All notable changes to `Filament Webhook Client` will be documented in this file.
 
+## v1.1.1 - 2025-08-13
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/11
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/13
+* Add Filament 4 installation instruction by @andreia in https://github.com/TappNetwork/filament-webhook-client/pull/16
+
+**Full Changelog**: https://github.com/TappNetwork/filament-webhook-client/compare/v1.1.0...v1.1.1
+
 ## v4.0.0 - 2025-08-13
 
 ### What's Changed
