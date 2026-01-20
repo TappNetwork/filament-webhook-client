@@ -11,7 +11,7 @@ Filament resource and policy for [Spatie Webhook Client](https://github.com/spat
 
 Filament | Filament Webhook Client | Documentation
 :--------|:-------------------|:--------------
-4.x/5.x. | 4.x                | Current
+4.x/5.x  | 4.x                | Current
 3.x      | 1.x                | [Check the docs](https://github.com/TappNetwork/filament-webhook-client/tree/1.x)
 
 ## Installation
