@@ -22,16 +22,8 @@ Filament | Filament Webhook Client | Documentation
 
 You can install the package via Composer:
 
-### For Filament 3
-
 ```bash
 composer require tapp/filament-webhook-client:"^1.0"
-```
-
-### For Filament 4
-
-```bash
-composer require tapp/filament-webhook-client:"^4.0"
 ```
 
 You can publish the config file with:
