@@ -2,6 +2,17 @@
 
 All notable changes to `Filament Webhook Client` will be documented in this file.
 
+## v4.0.1 - 2026-01-20
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/23
+* Bump stefanzweifel/git-auto-commit-action from 5 to 7 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/24
+* Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/25
+* Add Filament 5 support by @andreia in https://github.com/TappNetwork/filament-webhook-client/pull/27
+
+**Full Changelog**: https://github.com/TappNetwork/filament-webhook-client/compare/v4.0.0...v4.0.1
+
 ## v1.1.0 - 2025-04-08
 
 ### What's Changed
