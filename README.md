@@ -9,10 +9,10 @@ This plugin adds a Filament resource and a policy for [Spatie Webhook Client](ht
 
 ## Version Compatibility
 
- Filament | Filament Webhook Client
-:---------|:-----------------------
- 3.x      | 1.x
- 4.x      | 4.x
+Filament | Filament Webhook Client | Documentation
+:--------|:-------------------|:--------------
+4.x      | 4.x                | [Check the docs](https://github.com/TappNetwork/filament-webhook-client/tree/4.x)
+3.x      | 1.x                | Current
 
 ## Installation
 
@@ -94,11 +94,11 @@ public function panel(Panel $panel): Panel
 
 Webhook calls resource content example:
 
-![Filament Webhook Calls resource list](https://raw.githubusercontent.com/TappNetwork/filament-webhook-client/main/docs/webhook-calls-resource.png)
+![Filament Webhook Calls resource list](https://raw.githubusercontent.com/TappNetwork/filament-webhook-client/1.x/docs/webhook-calls-resource.png)
 
 Webhook calls view content example:
 
-![Filament Webhook Calls view record](https://raw.githubusercontent.com/TappNetwork/filament-webhook-client/main/docs/webhook-calls-view.png)
+![Filament Webhook Calls view record](https://raw.githubusercontent.com/TappNetwork/filament-webhook-client/1.x/docs/webhook-calls-view.png)
 
 ## Webhook Call Policy
 
