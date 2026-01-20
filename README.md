@@ -5,13 +5,13 @@
 ![GitHub Code Style Action Status](https://github.com/TappNetwork/filament-webhook-client/actions/workflows/fix-php-code-style-issues.yml/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/tapp/filament-webhook-client.svg?style=flat-square)](https://packagist.org/packages/tapp/filament-webhook-client)
 
-This plugin adds a Filament resource and a policy for [Spatie Webhook Client](https://github.com/spatie/laravel-webhook-client/).
+Filament resource and policy for [Spatie Webhook Client](https://github.com/spatie/laravel-webhook-client/).
 
 ## Version Compatibility
 
 Filament | Filament Webhook Client | Documentation
 :--------|:-------------------|:--------------
-4.x      | 4.x                | Current
+4.x/5.x. | 4.x                | Current
 3.x      | 1.x                | [Check the docs](https://github.com/TappNetwork/filament-webhook-client/tree/1.x)
 
 ## Installation
