@@ -2,6 +2,20 @@
 
 All notable changes to `Filament Webhook Client` will be documented in this file.
 
+## v4.1.0 - 2026-03-21
+
+### What's Changed
+
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/28
+* fix tests by @swilla in https://github.com/TappNetwork/filament-webhook-client/pull/29
+* Laravel 13 Support
+
+### New Contributors
+
+* @swilla made their first contribution in https://github.com/TappNetwork/filament-webhook-client/pull/29
+
+**Full Changelog**: https://github.com/TappNetwork/filament-webhook-client/compare/v4.0.1...v4.1.0
+
 ## v4.0.1 - 2026-01-20
 
 ### What's Changed
