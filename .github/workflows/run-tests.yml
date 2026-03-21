@@ -21,6 +21,8 @@ jobs:
         laravel: [13.*, 12.*]
         stability: [prefer-lowest, prefer-stable]
         include:
+          - laravel: 13.*
+            testbench: ^11.0
           - laravel: 12.*
             testbench: ^10.0
 
@@ -51,4 +53,4 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
-        run: vendor/bin/pest --ci
+        run: vendor/bin/pest --ci --no-coverage
