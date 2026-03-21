@@ -6,6 +6,6 @@ declare(strict_types=1);
 if (function_exists('view')) {
     app('view')->addNamespace(
         'filament-webhook-client',
-        __DIR__ . '/resources/views'
+        __DIR__.'/resources/views'
     );
 }
