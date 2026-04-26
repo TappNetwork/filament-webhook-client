@@ -2,6 +2,16 @@
 
 All notable changes to `Filament Webhook Client` will be documented in this file.
 
+## v4.1.1 - 2026-04-26
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/30
+* Bump dependabot/fetch-metadata from 3.0.0 to 3.1.0 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/31
+* Add PHP 8.5 support by @swilla in https://github.com/TappNetwork/filament-webhook-client/pull/32
+
+**Full Changelog**: https://github.com/TappNetwork/filament-webhook-client/compare/v4.1.0...v4.1.1
+
 ## v4.1.0 - 2026-03-21
 
 ### What's Changed
