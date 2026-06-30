@@ -4,11 +4,13 @@ namespace Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages;
 
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
-use Tapp\FilamentWebhookClient\Resources\WebhookCallResource;
 
 class EditWebhookCall extends EditRecord
 {
-    protected static string $resource = WebhookCallResource::class;
+    public static function getResource(): string
+    {
+        return config('filament-webhook-client.resources.WebhookCallResource');
+    }
 
     protected function getHeaderActions(): array
     {

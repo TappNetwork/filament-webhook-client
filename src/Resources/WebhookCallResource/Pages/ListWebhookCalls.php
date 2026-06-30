@@ -4,11 +4,13 @@ namespace Tapp\FilamentWebhookClient\Resources\WebhookCallResource\Pages;
 
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
-use Tapp\FilamentWebhookClient\Resources\WebhookCallResource;
 
 class ListWebhookCalls extends ListRecords
 {
-    protected static string $resource = WebhookCallResource::class;
+    public static function getResource(): string
+    {
+        return config('filament-webhook-client.resources.WebhookCallResource');
+    }
 
     protected function getHeaderActions(): array
     {
