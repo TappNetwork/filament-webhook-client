@@ -11,6 +11,8 @@ use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ViewEntry;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Spatie\WebhookClient\Models\WebhookCall;
@@ -96,15 +98,23 @@ class WebhookCallResource extends Resource
                 TextColumn::make('url')
                     ->sortable()
                     ->searchable(),
+                IconColumn::make('exception.code')
+                    ->label('Exception')
+                    ->boolean()
+                    ->alignCenter()
+                    ->trueIcon(Heroicon::ExclamationTriangle)
+                    ->trueColor('warning')
+                    ->toggleable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
