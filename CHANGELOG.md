@@ -2,6 +2,20 @@
 
 All notable changes to `Filament Webhook Client` will be documented in this file.
 
+## v4.1.2 - 2026-07-01
+
+### What's Changed
+
+* Bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/TappNetwork/filament-webhook-client/pull/33
+* Better default table by @paulhennell in https://github.com/TappNetwork/filament-webhook-client/pull/35
+* Resource pages to use the class from the config file by @paulhennell in https://github.com/TappNetwork/filament-webhook-client/pull/34
+
+### New Contributors
+
+* @paulhennell made their first contribution in https://github.com/TappNetwork/filament-webhook-client/pull/35
+
+**Full Changelog**: https://github.com/TappNetwork/filament-webhook-client/compare/v4.1.1...v4.1.2
+
 ## v4.1.1 - 2026-04-26
 
 ### What's Changed
